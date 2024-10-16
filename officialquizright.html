@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Quiz WebApp</title>
+    <script>
+        // JavaScriptで正解・不正解の表示を制御
+        function checkAnswer(questionNumber, selectedAnswer) {
+            // 各問ごとの正解を設定
+            const correctAnswers = {
+                1: 2, // 問1の正解は2 仮設定
+                2: 4  // 問2の正解は4 仮設定
+            };
+
+            // 正解か不正解を判定
+            if (correctAnswers[questionNumber] === selectedAnswer) {
+                document.getElementById('result' + questionNumber).innerText = '正解！';
+            } else {
+                document.getElementById('result' + questionNumber).innerText = '不正解...';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center;">公式 計算</h1>
+
+    <!-- 問1 --> 
+    <h3 style="text-align: left;">問1</h3>
+    <h2 style="text-align: left;">?????????????????????????????</h2> 
+    <!-- 問1 解答ボタン（横並び） -->
+    <table>
+        <tr>
+            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(1, 1)">1</button></td>
+            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(1, 2)">2</button></td>
+            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(1, 3)">3</button></td>
+            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(1, 4)">4</button></td>
+        </tr>
+    </table>
+    <!-- 問1の結果表示エリア -->
+    <p id="result1" style="font-weight: bold;"></p>
+
+    <!-- 問2 -->
+    <h3 style="text-align: left;">問2</h3>
+    <h2 style="text-align: left;">?????????????????????????????</h2>
+    <!-- 問2 解答ボタン（横並び） -->
+    <table>
+        <tr>
+            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(2, 1)">1</button></td>
+            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(2, 2)">2</button></td>
+            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(2, 3)">3</button></td>
+            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(2, 4)">4</button></td>
+        </tr>
+    </table>
+    <!-- 問2の結果表示エリア -->
+    <p id="result2" style="font-weight: bold;"></p>
+
+    <!-- 戻るボタン -->
+    <form style="text-align: left;">
+        <a href="quizlist.html">
+            <input class="btn" type="button" value="戻る" size="80">
+        </a>
+    </form>
+</body>
+</html>
