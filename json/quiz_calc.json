@@ -1,0 +1,33 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "1 + 1 = ",
+            "choices": ["1", "2", "3", "4"],
+            "correctAnswer": 2,
+            "explanation": ""
+        },
+        {
+            "id": 2,
+            "text": " 8 - 6 = ",
+            "choices": ["2", "3", "6", "8"],
+            "correctAnswer": 1,
+            "explanation": ""
+        },
+        {
+            "id": 3,
+            "text": " 4 × 3 = ",
+            "choices": ["4", "6", "8", "12"],
+            "correctAnswer": 4,
+            "explanation": ""
+        },
+        {
+            "id": 4,
+            "text": "9 ÷ 3 = ",
+            "choices": ["1", "2", "3", "9"],
+            "correctAnswer": 3,
+            "explanation": ""
+        }
+        
+    ]
+}
