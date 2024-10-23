@@ -5,45 +5,24 @@
     <title>Quiz WebApp</title> 
     <!-- Bootstrap JavaScriptのCDN -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="../js/quizPlay.js"></script> <!-- JavaScriptファイルを読み込む -->
 </head>
 <body>
-    <h1 style="text-align: center;" class="bg-dark text-white mb-5">公式 ???</h1>
+    <h1 style="text-align: center;">公式 ???</h1>
+    <div id="quiz-container"></div> <!-- クイズを表示するエリア -->
+    
+    <!-- 正解数と正解率の表示エリア -->
+    <div style="margin-top: 20px; text-align: center;">
+        <p id="correctCount">正解数: 0</p>
+        <p id="accuracyRate">正解率: 0%</p>
+    </div>
 
-    <!-- 問1 -->
-    <h3 style="text-align: left;">問1</h3>
-    <h2 style="text-align: left;">?????????????????????????????</h2>
-
-    <!-- 問1 解答ボタン（横並び） -->
-    <table>
-        <tr>
-            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(1, 1)">1</button></td>
-            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(1, 2)">2</button></td>
-            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(1, 3)">3</button></td>
-            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(1, 4)">4</button></td>
-        </tr>
-    </table>
-   
-    <!-- 問2 -->
-    <h3 style="text-align: left;">問2</h3>
-    <h2 style="text-align: left;">?????????????????????????????</h2>
-
-    <!-- 問2 解答ボタン（横並び） -->
-    <table>
-        <tr>
-            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(2, 1)">1</button></td>
-            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(2, 2)">2</button></td>
-            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(2, 3)">3</button></td>
-            <td><button style="width: 100px; height: 50px;" onclick="checkAnswer(2, 4)">4</button></td>
-        </tr>
-    </table>
-
-    <!-- 戻るボタン -->
-    <form style="text-align: left;">
+    <form align="left">
         <a href="quizlist.html">
-            <input class="btn" type="button" value="戻る" size="80">
+        <input class="btn" type="button" value="戻る" size="80">
         </a>
-    </form>
+      </form>
+   
     <!-- Bootstrap CSSのCDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </body>
