@@ -1,28 +1,30 @@
 {
+    "Qid": 2,
+    "title": "小学校低学年の漢字",
     "questions": [
         {
-            "id": 1,
+            "no": 1,
             "text": "時計",
             "choices": ["はかり", "にちじ", "じけい", "とけい"],
             "correctAnswer": 4,
             "explanation": "いまのじかんをしるためのどうぐ。"
         },
         {
-            "id": 2,
+            "no": 2,
             "text": "相手",
             "choices": ["そうて", "あいて", "あいしゅ", "そうしゅ"],
             "correctAnswer": 2,
             "explanation": "例：はなし相手、たいせん相手。"
         },
         {
-            "id": 3,
+            "no": 3,
             "text": "空気",
             "choices": ["くうき", "そらき", "そらけ", "からき"],
             "correctAnswer": 1,
             "explanation": "いつもまわりにあって、めにみえないけど、いきをするのにひつようなもの。"
         },
         {
-            "id": 4,
+            "no": 4,
             "text": "日光",
             "choices": ["ひかり", "ひこう", "にっこう", "にちこう"],
             "correctAnswer": 3,

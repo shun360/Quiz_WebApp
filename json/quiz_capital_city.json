@@ -1,28 +1,30 @@
 {
+    "Qid": 3,
+    "title": "世界の首都",
     "questions": [
         {
-            "id": 1,
+            "no": 1,
             "text": "日本",
             "choices": ["おおさか", "きょうと", "とうきょう", "しんじゅく"],
             "correctAnswer": 3,
             "explanation": ""
         },
         {
-            "id": 2,
+            "no": 2,
             "text": "アメリカ",
             "choices": ["テキサス", "ニューヨーク", "ワシントンD.C", "カリフォルニア"],
             "correctAnswer": 3,
             "explanation": ""
         },
         {
-            "id": 3,
+            "no": 3,
             "text": "イギリス",
             "choices": ["ローマ", "パリ", "オックスフォード", "ロンドン"],
             "correctAnswer": 4,
             "explanation": ""
         },
         {
-            "id": 4,
+            "no": 4,
             "text": "フランス",
             "choices": ["パリ", "ベルリン", "モスクワ", "マルセイユ"],
             "correctAnswer": 1,
