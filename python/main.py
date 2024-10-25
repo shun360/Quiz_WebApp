@@ -16,7 +16,7 @@ MONGO_PORT = os.getenv("MONGO_PORT")
 MONGO_DB = os.getenv("MONGO_DB")
 
 
-mongo_connecter = f"mongodb://{MONGO_USER}:{MONGO_PASSWORD}@{MONGO_SERVER}:{MONGO_PORT}/"
+mongo_connecter = f"mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@{MONGO_SERVER}:{MONGO_PORT}/"
 
 # クイズ一問のクラス
 class Quiz(BaseModel):
