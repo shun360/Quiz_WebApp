@@ -1,0 +1,26 @@
+// *README* VS CodeでサイドバーからMongoDB for VS Codeの拡張機能のタブを開く。→PLAYGROUNDS→Create New Playgroundをクリックして、開いたjsファイルの内容を全部消してから、下記から必要なコードを記述する。
+//DB, Collection宣言
+use('quizDB');
+qList = getCollection('quizList')
+
+// クイズの全データを取得 
+qList.find({});
+
+
+
+// クイズの挿入
+qList.insertOne(
+  {
+    Qid:"<int>" ～
+  }
+);
+
+// Qidが1のクイズタイトルを変更
+qList.updateOne(
+    { "Qid": 1 },  // 条件
+    { $set: { "title": "Updated Quiz Title" }}  // 更新内容
+)
+
+
+// Qidが1のクイズを削除
+qList.deleteOne({ "Qid": 1 })
