@@ -9,6 +9,11 @@ MONGO_DB=quizDB
 
 
 ## VS Code上のpythonファイルの実行方法
+1.pythonフォルダに移動
 ```
-python python\<ファイル名>
+cd python
+```
+2.実行
+```
+python <ファイル名>
 ```

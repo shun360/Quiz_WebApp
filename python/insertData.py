@@ -6,10 +6,11 @@ from pymongo import MongoClient
 import json
 from jsonschema import validate, ValidationError
 
-def insert_quiz(quiz):
-    with open('python\quiz_schema.json', encoding="utf-8") as q_json:
+def insert_quiz(path):
+    with open(r'..\json\schema\quizzes_schema.json', encoding="utf-8") as q_json:
         json_schema = json.load(q_json)
-    
+    with open(path, encoding='utf-8') as file:
+        quiz = json.load(file)
     try:
         validate(quiz, json_schema)
     except ValidationError as e:
@@ -36,15 +37,5 @@ def insert_quiz(quiz):
 
 
 if __name__ == '__main__':
-    testQ = {
-        'Qid': 0, 
-        'title':'test', 
-        'questions':[{
-            "no": 1,
-            "text": "1 + 1 = ",
-            "choices": ["1", "2", "3", "4"],
-            "correctAnswer": 2,
-            "explanation": ""
-        }]
-    }
+    testQ = r"..\json\quizzes\test_quiz.json"
     print(insert_quiz(testQ))
