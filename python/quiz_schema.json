@@ -12,26 +12,33 @@
         },
         "questions": {
             "type":"array",
-            "required": ["no", "text", "choices", "correctAnswer", "explanation"],
-            "properties": {
-                "no": {
-                    "type": "integer"
+            "items":{
+                "type":"object",
+                "properties": {
+                    "no": {
+                        "type": "integer"
+                    },
+                    "text":{
+                        "type":"string"
+                    },
+                    "choices":{
+                        "type":"array",
+                        "items": {
+                            "type":"string"
+                        }
+                    },
+                    "correctAnswer":{
+                        "type": "integer"
+                    },
+                    "explanation":{
+                        "type":"string"
+                    }
                 },
-                "text":{
-                    "type":"string"
-                },
-                "choices":{
-                    "type":"array"
-                },
-                "correctAnswer":{
-                    "type": "integer"
-                },
-                "explanation":{
-                    "type":"string"
-                }
+                "required": ["no", "text", "choices", "correctAnswer", "explanation"]
             }
 
         }
         
-    }
+    },
+    "required": ["Qid", "title", "questions"]
 }

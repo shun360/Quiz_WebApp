@@ -1,7 +1,8 @@
 // *README* VS CodeでサイドバーからMongoDB for VS Codeの拡張機能のタブを開く。→PLAYGROUNDS→Create New Playgroundをクリックして、開いたjsファイルの内容を全部消してから、下記から必要なコードを記述する。
-//DB, Collection宣言
+
+//DB, Collection宣言(必須)
 use('quizDB');
-qList = getCollection('quizList')
+qList = db.getCollection('quizList')
 
 // クイズの全データを取得 
 qList.find({});
