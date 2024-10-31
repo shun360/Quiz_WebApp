@@ -26,12 +26,12 @@ def delete_quizzes(qid, no = -1):
         return 0
 
 if __name__ == '__main__':
-    is_delete_one = int(input('一問のみ削除の場合は0、クイズセットを削除したい場合は1を入力してください：'))
+    is_delete_set = int(input('一問のみ削除の場合は0、クイズセットを削除したい場合は1を入力してください:'))
     
-    if is_delete_one:
-        qid = int(input('[セット削除] Qidを入力してください：'))
+    if is_delete_set:
+        qid = int(input('[セット削除] Qidを入力してください:'))
         print(delete_quizzes(qid), '件が削除されました')
     else:
-        qid = int(input('[一問削除] Qidを入力してください：'))
-        no = int(input('[一問削除] noを入力してください：'))
+        qid = int(input('[一問削除] Qidを入力してください:'))
+        no = int(input('[一問削除] noを入力してください:'))
         print(delete_quizzes(qid, no), '件が削除されました')

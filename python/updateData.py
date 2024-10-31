@@ -4,9 +4,9 @@ from pymongo import MongoClient
 import json
 from jsonschema import validate, ValidationError
 
-def update_quiz(qid, no, path):
-    with open(r'..\json\schema\a_quiz_schema.json', encoding="utf-8") as q_json:
-        json_schema = json.load(q_json)
+def update_quiz(path, qid, no):
+    with open(r'..\json\schema\a_quiz_schema.json', encoding="utf-8") as file:
+        json_schema = json.load(file)
 
     with open(path, encoding='utf-8') as file:
         quiz = json.load(file)
@@ -16,13 +16,12 @@ def update_quiz(qid, no, path):
     except ValidationError as e:
         print('エラー/バリデート時:', e.message)
         return
+    
     load_dotenv()
-
     MONGO_USER = os.getenv("MONGO_USER")
     MONGO_PASSWORD = os.getenv("MONGO_PASSWORD")
     MONGO_SERVER = os.getenv("MONGO_SERVER")
     MONGO_DB = os.getenv("MONGO_DB")
-
     mongo_connecter = f"mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@{MONGO_SERVER}/"
 
     try:
@@ -42,10 +41,10 @@ def update_quiz(qid, no, path):
 
 if __name__ == '__main__':
 
-    qid = int(input('Qidを入力してください：'))
-    no = int(input('noを入力してください：'))
+    qid = int(input('Qidを入力してください:'))
+    no = int(input('noを入力してください:'))
     path = input("クイズ一問のファイルパスを入力してください:")
-    result = update_quiz(qid, no, path)
+    result = update_quiz(path, qid, no)
     if result > 0:
         print("更新に成功しました")
     else:
