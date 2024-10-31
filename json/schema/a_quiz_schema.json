@@ -4,9 +4,6 @@
     "description": "クイズ一問のデータ構造定義",
     "type": "object",
     "properties" :{
-        "no": {
-            "type": "integer"
-        },
         "text":{
             "type":"string"
         },
@@ -23,7 +20,7 @@
             "type":"string"
         }
     },
-    "required": ["no", "text", "choices", "correctAnswer", "explanation"]
+    "required": ["text", "choices", "correctAnswer", "explanation"]
             
 
 }

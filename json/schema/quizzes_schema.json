@@ -4,9 +4,6 @@
     "description": "クイズセットのデータ構造定義",
     "type": "object",
     "properties" :{
-        "Qid": {
-            "type": "integer"
-        },
         "title": {
             "type": "string"
         },
@@ -15,8 +12,8 @@
             "items":{
                 "type":"object",
                 "properties": {
-                    "no": {
-                        "type": "integer"
+                    "no":{
+                        "type":"integer"
                     },
                     "text":{
                         "type":"string"
@@ -40,5 +37,5 @@
         }
         
     },
-    "required": ["Qid", "title", "questions"]
+    "required": ["title", "questions"]
 }
