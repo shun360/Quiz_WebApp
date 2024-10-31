@@ -1,5 +1,4 @@
 
-
 let correctCount = 0; // 正解数
 let totalQuestions = 0; // 出題された問題数
 
@@ -17,9 +16,10 @@ window.onload = function() {
 
 // JSONデータを取得してクイズを表示する
 async function loadQuiz() {
-    const response = await fetch('../json/quiz_calc.json');
-    const data = await response.json();
-    const questions = data.questions;
+    const response = await fetch('http://localhost:8000/api/quizzes');
+    const questions = await response.json();
+    //const data = await response.json();
+   
 
     totalQuestions = questions.length; // 全問題数を取得
     let quizContainer = document.getElementById('quiz-container');
