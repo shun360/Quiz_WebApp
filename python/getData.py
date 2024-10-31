@@ -16,7 +16,7 @@ def get_all_quiz():
     mongo_connecter = f"mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@{MONGO_SERVER}/"
     try:
         db = MongoClient(mongo_connecter)[MONGO_DB]
-        all_quiz = list(db['quizList'].find({}, {'_id: 0'}))
+        all_quiz = list(db['quizList'].find({}, {'_id': 0}))
         return all_quiz
     except Exception as e:
         print('エラー：', e)
