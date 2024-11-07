@@ -83,6 +83,7 @@ function disableButtons(questionNo) {
     buttons.forEach(button => button.disabled = true);  // ボタンを無効化
 }
 
+
 // 正解数と正解率を表示する関数
 function updateStats() {
     let correctCountElement = document.getElementById('correctCount');  // 正解数表示の要素を取得
